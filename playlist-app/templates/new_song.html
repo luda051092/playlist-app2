@@ -1,0 +1,23 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <h1>Add a form that when submitted creates a new song!</h1>
+
+  <form method="POST" action="{{ url_for('add_song') }}">Add a Song</a>
+  }}">
+    {{ form.hidden_tag() }}
+    
+    <label for="title">Title:</label>
+    {{ form.title.label }}
+    {{ form.title(class="form-control") }}
+
+    <label for="artist">Artist:</label>
+    {{ form.artist.label }}
+    {{ form.artist(class="form-control") }}
+
+    <button type="submit" class="btn btn-primary">Create Song</button>
+  </form>
+
+{% endblock %}
